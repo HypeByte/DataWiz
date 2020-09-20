@@ -1,25 +1,64 @@
 
 #include<stdio.h>
-#include "../Src/Baseplate-Algorithms/ConversionsLib.h"
+#include<stdlib.h>
+#include "../Src/Parse/Getters.h"
 
 
 int main(void) {
  
-int n = parseInt("123123123");
-double f = parseDecimal("21.3123");
-bool l = parseBool('1');
-char * string[3];
-parseStringArr(string,3,"aaewfawefasefaefaef,b",',');
+ATTACH_SCRIPT(script,"script.dtwiz");
 
-printf("n :%i\n",n);
-printf("f :%lf\n",f);
 
-if(l) {
-    printf("string :%s\n",string[0]);
+
+int integer = getInteger("testingvalue",script);
+
+double decimal = getDecimal("a_decimal",script);
+
+
+
+printf("integer is %i\n",integer);
+printf("decimal is %lf\n",decimal);
+
+
+int parsedInt = parseInt("23123123");
+long int parsedLongInt = parseLongInt("21213123");
+bool parsedBool = parseBool('1');
+char string[5];
+parseCharArr(string,5,"Hiii");
+double parseDecim = parseDecimal("3.14");
+int twonums[2];
+parseIntArr(twonums,2,"1,2",',');
+double twoDecs[2];
+parseDeciArr(twoDecs,2,"3.14,2.1",',');
+bool twotruths[2];
+parseBoolArr(twotruths,"10");
+char *strings[2];
+parseStringArr(strings,2,"heello,hi",',');
+
+printf("parsed int is %i\n",parsedInt);
+printf("parsed long int is %li\n",parsedLongInt);
+
+if( parsedBool ) {
+    printf("parsedBool is true also, string is %s\n",string);
 }
 
-long int BigO = parseLongInt("4294967295");
-printf("%li\n",BigO);
+printf("Pi is %lf\n",parseDecim);
+printf("the first num from twonums is %i\n",twonums[0]);
+printf("Pi again is %lf\n",twoDecs[0]);
+
+if( twotruths[0] ) {
+
+    printf("twotruths[0] is true! Also strings of 1 is %s\n",strings[0]);
+
+}
+
+
+
+
+
+
+
+
 
 
 

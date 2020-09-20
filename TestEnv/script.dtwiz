@@ -1,12 +1,13 @@
 !datawiz
 
 
-
 i/testingvalue/0;
 
-s/testingstring/Hello;
+c/yo/2;
 
 d/a_decimal/1231.123;
+
+b/amCool?/1;
 
 
 
