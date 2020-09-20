@@ -31,7 +31,7 @@ return product;
 
 //Parse functions
 
-int parseInt(char number[]) { //Convers strings to ints, for example "123" --> 123, "-321" --> -321
+int parseInt(char * number) { //Convers strings to ints, for example "123" --> 123, "-321" --> -321
 
     int num = 0;
 

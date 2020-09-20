@@ -3,7 +3,7 @@
 #include<stdlib.h>
 #define ATTACH_SCRIPT(variable_name,file_name)  FILE * variable_name = fopen( file_name ,"r+");
 
-int parseInt(char number[]);
+int parseInt(char * number);
 int power(int input, int exponent);
 bool parseBool(char flag);
 double parseDecimal(char *deci);
