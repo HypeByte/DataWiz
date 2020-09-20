@@ -1,0 +1,4 @@
+State: Work in progress.
+
+Updates:
+-Fixed Buffer Overflow vulnerability at Baseplate-Algortihms/ConversionsLib.c
