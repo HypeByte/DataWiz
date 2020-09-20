@@ -39,10 +39,10 @@ int parseInt(char number[]) { //Convers strings to ints, for example "123" --> 1
 
     for( ; i < strlen(number) ; i++) {
          
-          num+= (number[i] - '0') * power(10,strlen(number) - i);
+          num+= (number[i] - '0') * power(10,strlen(number) - i - 1);
     }
 
-num = number[0] == '-' ? -num/10 : num/10;
+num = number[0] == '-' ? -num : num;
 
 return num;
 
@@ -275,6 +275,27 @@ void parseBoolArr(bool * arr, char * S_arr) {
 
 
       
+}
+
+
+
+
+
+long int parseLongInt(char number[]) { //Convers strings to ints, for example "123" --> 123, "-321" --> -321
+
+    long int num = 0;
+
+    int i = number[0] == '-' ? 1 : 0;
+
+    for( ; i < strlen(number) ; i++) {
+         
+          num+= (long int)(number[i] - '0') * (long int)power(10,strlen(number) - i - 1);
+    }
+
+num = number[0] == '-' ? -num : num;
+
+return num;
+
 }
 
 

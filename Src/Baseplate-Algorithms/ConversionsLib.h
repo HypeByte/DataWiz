@@ -12,3 +12,4 @@ void parseDeciArr(double * arr, int length, char * S_arr, char sepC);
 void parseStringArr(char * arr[], int length, char * S_arr, char sepC);
 void parseCharArr(char * arr, int length, char * S_arr);
 void parseBoolArr(bool * arr, char * S_arr);
+long int parseLongInt(char number[]);
