@@ -4,3 +4,4 @@ Updates:
 -Fixed Buffer Overflow vulnerability at Baseplate-Algortihms/ConversionsLib.c
 -Debugged some functions
 -Added compiler support at Baseplate-Algorithms/ConversionsLib.c
+-Added a huge bug patch to my Getters.c module. You will now be able to get strings, chars, integers, and decimals. More Getter functions coming soon :)
