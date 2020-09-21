@@ -19,10 +19,13 @@ char aChar = getChar("yo",script);
 char superstring[6];
 LoadString("superstring",script,superstring);
 
+bool amCool = getBool("amCool?",script);
+
 printf("integer is %i\n",integer);
 printf("decimal is %lf\n",decimal);
 printf("A char is %c\n",aChar);
 printf("Super string is %s\n",superstring);
+amCool ? printf("Yes, im cool\n") : printf("No, im not cool :(\n");
 
 int parsedInt = parseInt("23123123");
 long int parsedLongInt = parseLongInt("21213123");

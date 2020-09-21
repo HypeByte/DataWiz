@@ -96,7 +96,7 @@ char * nameSnap = malloc( strlen(ElemName) );
 }
 
 
-//Debugging in process..
+
 
 char getChar(char *ElemName, FILE * BankScript) {
 rewind(BankScript);
@@ -135,7 +135,6 @@ while( fgets(LineSnap,64,BankScript) != NULL) {
 }
 
 
-//Debug in Progress
 
 
 void LoadString(char * ElemName, FILE * BankScript, char * target) {
@@ -179,6 +178,45 @@ char * nameSnap = malloc( strlen(ElemName) );
 
     }
 }
+
+}
+
+
+
+
+char getBool(char *ElemName, FILE * BankScript) {
+rewind(BankScript);
+char LineSnap[64];
+char * nameSnap = malloc( strlen(ElemName) );
+
+while( fgets(LineSnap,64,BankScript) != NULL) {
+
+    if(LineSnap[0] == 'b') {
+    
+      for(int bG = 2; bG < (int) strlen(ElemName) +  2; bG++) {
+
+            nameSnap[bG - 2] = LineSnap[bG];
+            
+
+        }
+
+        if(strcmp(nameSnap,ElemName) == 0) {
+
+            return LineSnap[3 + strlen(ElemName)] == '1' ? true : false;
+            break;
+
+        }
+
+
+
+    }
+
+}
+
+
+
+
+
 
 }
 
