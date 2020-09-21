@@ -14,11 +14,15 @@ int integer = getInteger("testingvalue",script);
 
 double decimal = getDecimal("a_decimal",script);
 
+char aChar = getChar("yo",script);
 
+char superstring[6];
+LoadString("superstring",script,superstring);
 
 printf("integer is %i\n",integer);
 printf("decimal is %lf\n",decimal);
-
+printf("A char is %c\n",aChar);
+printf("Super string is %s\n",superstring);
 
 int parsedInt = parseInt("23123123");
 long int parsedLongInt = parseLongInt("21213123");
@@ -51,6 +55,10 @@ if( twotruths[0] ) {
     printf("twotruths[0] is true! Also strings of 1 is %s\n",strings[0]);
 
 }
+
+
+
+
 
 
 

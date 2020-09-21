@@ -4,7 +4,7 @@
 
 
 int getInteger(char * ElemName, FILE * BankScript) {
-
+rewind(BankScript);
 char LineSnap[100];
 char valSnap[32];
 char * nameSnap = malloc( strlen(ElemName) );
@@ -56,7 +56,7 @@ char * nameSnap = malloc( strlen(ElemName) );
 
 
 double getDecimal(char * ElemName, FILE * BankScript) {
-
+rewind(BankScript);
 char LineSnap[64];
 char valSnap[32];
 char * nameSnap = malloc( strlen(ElemName) );
@@ -97,9 +97,9 @@ char * nameSnap = malloc( strlen(ElemName) );
 
 
 //Debugging in process..
-/*
-char getChar(char *ElemName, FILE * BankScript) {
 
+char getChar(char *ElemName, FILE * BankScript) {
+rewind(BankScript);
 char LineSnap[64];
 char * nameSnap = malloc( strlen(ElemName) );
 
@@ -132,16 +132,14 @@ while( fgets(LineSnap,64,BankScript) != NULL) {
 
 
 
-
-
 }
-*/
+
 
 //Debug in Progress
 
-/*
-void LoadString(char * ElemName, FILE * BankScript, char * target) {
 
+void LoadString(char * ElemName, FILE * BankScript, char * target) {
+rewind(BankScript);
 char LineSnap[64];
 char * nameSnap = malloc( strlen(ElemName) );
 
@@ -162,7 +160,7 @@ char * nameSnap = malloc( strlen(ElemName) );
             for(int vGet = 3 + (int) strlen(ElemName); LineSnap[vGet] != ';'; vGet++){
                 
                 target[vGet - (3 + (int) strlen(ElemName))] = LineSnap[vGet];
-                printf("%c\n",LineSnap[vGet]);
+                
 
         }
 
@@ -185,7 +183,7 @@ char * nameSnap = malloc( strlen(ElemName) );
 }
 
 
-*/
+
 
 
 
