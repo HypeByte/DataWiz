@@ -21,11 +21,14 @@ LoadString("superstring",script,superstring);
 
 bool amCool = getBool("amCool?",script);
 
+long int bigboi = getLongInteger("urmom",script);
+
 printf("integer is %i\n",integer);
 printf("decimal is %lf\n",decimal);
 printf("A char is %c\n",aChar);
 printf("Super string is %s\n",superstring);
 amCool ? printf("Yes, im cool\n") : printf("No, im not cool :(\n");
+printf("Long integer is %li\n",bigboi);
 
 int parsedInt = parseInt("23123123");
 long int parsedLongInt = parseLongInt("21213123");

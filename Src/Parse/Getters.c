@@ -222,6 +222,52 @@ while( fgets(LineSnap,64,BankScript) != NULL) {
 
 
 
+long int getLongInteger(char * ElemName, FILE * BankScript) {
+rewind(BankScript);
+char LineSnap[100];
+char valSnap[32];
+char * nameSnap = malloc( strlen(ElemName) );
+
+    while(fgets(LineSnap,100,BankScript) != NULL ) {
+
+        if(LineSnap[0] == 'l') {
+
+
+        for(int bG = 2; bG < (int) strlen(ElemName) +  2; bG++) {
+
+            nameSnap[bG - 2] = LineSnap[bG];
+            
+
+        }
+        
+
+        if(strcmp(nameSnap,ElemName) == 0){
+
+      
+          for(int vGet = 3 + (int) strlen(ElemName); LineSnap[vGet] != ';'; vGet++){
+        
+              valSnap[vGet - (3 + (int) strlen(ElemName))] = LineSnap[vGet];
+                
+        }
+          
+       
+
+
+        }
+        
+        return parseLongInt(valSnap);
+       break;
+        
+
+
+
+
+    }
+}
+
+}
+
+
 
 
 
