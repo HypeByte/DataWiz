@@ -1,62 +1,53 @@
+typedef struct {
 
+  char * name;
 
+  int value;
 
+}
+BA_Int;
 
 typedef struct {
 
-char * name;
+  char * name;
 
-int value;
+  double value;
 
-}BA_Int;
-
-
-typedef struct {
-
-char *name;
-
-double value;
-
-}BA_Double;
-
+}
+BA_Double;
 
 typedef struct {
 
-char *name;
+  char * name;
 
-char value;
+  char value;
 
-}BA_Char;
-
-typedef struct {
-
-char *name;
-
-char *value;
-
-}BA_String;
-
+}
+BA_Char;
 
 typedef struct {
 
-char *name;
+  char * name;
 
-int *value;
+  char * value;
 
-}BA_IntArr;
-
+}
+BA_String;
 
 typedef struct {
 
-char *name;
+  char * name;
 
-double *value;
+  int * value;
 
-}BA_DeciArr;
+}
+BA_IntArr;
 
+typedef struct {
 
+  char * name;
 
+  double * value;
 
-
-
-
+}
+BA_DeciArr;
