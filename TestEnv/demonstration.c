@@ -20,7 +20,7 @@ int main(void) {
 
   bool amCool = getBool("amCool?", script);
 
-  long int bigboi = getLongInteger("urmom", script);
+  long int bigboi = getLongInteger("num", script);
 
   printf("integer is %i\n", integer);
   printf("decimal is %lf\n", decimal);
